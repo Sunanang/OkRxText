@@ -1,15 +1,29 @@
 package com.sunanang.okrxtext;
 
 import com.sunanang.okrxtext.bean.GsonBean;
+
+import java.util.HashMap;
+
 import io.reactivex.Observable;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 /**
  * Created by ${Sunanang} on 2018/3/20.
  */
 
 public interface QNewsService {
+
+    /**
+     * @GET     get请求
+     * @POST    post请求
+     * @Query   拼接请求链接
+     * @Url     请求链接完整地址，直接访问
+     *
+     * 具体参考  https://www.jianshu.com/p/15ccdacfd199
+     */
 
     public static final String DESC = "desc"; // 指定时间之前发布的
     public static final String ASC = "asc";   // 指定时间之后发布的
@@ -54,10 +68,9 @@ public interface QNewsService {
 
     );
 
-    /**
-     * @GET     get请求
-     * @Query   拼接请求链接
-     * @Url     请求链接完整地址，直接访问
-     */
+    @POST("ajax.mobileSword")
+    Observable<String> login(@QueryMap HashMap<String,String> paramsMap);
+
+
 
 }

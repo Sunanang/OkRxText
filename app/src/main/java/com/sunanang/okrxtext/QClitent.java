@@ -67,8 +67,8 @@ public class QClitent {
 
         // 返回 Retrofit 对象
         return new Retrofit.Builder()
-                .baseUrl(URLUtils.DATA_URL)
-                .client(builder.build()) // 传入请求客户端
+                .baseUrl(URLUtils.DATA_URL) // 传入baseUrl地址，后续的直接拼接
+                .client(builder.build())    // 传入请求客户端
                 .addConverterFactory(GsonConverterFactory.create()) // 添加Gson转换工厂
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) // 添加RxJava2调用适配工厂
                 .build();
