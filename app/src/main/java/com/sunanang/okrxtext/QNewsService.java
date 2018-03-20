@@ -15,7 +15,6 @@ import retrofit2.http.QueryMap;
  */
 
 public interface QNewsService {
-
     /**
      * @GET     get请求
      * @POST    post请求
