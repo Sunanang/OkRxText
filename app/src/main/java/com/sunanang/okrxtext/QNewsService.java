@@ -25,15 +25,15 @@ public interface QNewsService {
      *
      *
      *
-     * 注解	                    请求方式	                        用途
+     * 注解	                        请求方式	                        用途
      * @Path	                      GET	            用于替换Url路径中的变量字符
      * @Query	                      GET	            用于拼接在Url路径后的查询参数，但相对于直接在Url后拼接，@Query则是添加一个变量
      * @QueryMap	                  GET	            效果等同于多个@Query 参数为Map类型
      * @FormUrlEncoded/@Field	      POST	            @FormUrlEncoded修饰表单域，每个表单域子件key-value采用@Field修饰
      * @Body	                      POST	            可以指定一个对象作为HTTP请求体@Body
      * @FormUrlEncoded/@Field	      PUT	            @FormUrlEncoded修饰表单域，每个表单域子件key-value采用@Field修饰
-     * @HTTP/@Body	             DELETE	            @HTTP修饰表单域，以指定一个对象作为HTTP请求体@Body，此时表单域一定要写上hasBody = true
-     * @Multipart/@Part或者@PartMap POST	            文件上传使用，@Multipart修饰表单域，参数@Part修饰或者参数使用@PartMap
+     * @HTTP/@Body	                 DELETE	            @HTTP修饰表单域，以指定一个对象作为HTTP请求体@Body，此时表单域一定要写上hasBody = true
+     * @Multipart/@Part或者@PartMap   POST	            文件上传使用，@Multipart修饰表单域，参数@Part修饰或者参数使用@PartMap
      * 具体参考http://blog.csdn.net/f917386389/article/details/76461231
      */
 
